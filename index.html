@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中醫</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <style>
+    :root {
+      --swiper-navigation-size: 24px;
+    }
+    html, body {
+      padding: 0;
+      margin: 0;
+    }
+    .swiper {
+      max-width: 600px;
+      /* height: 300px; */
+    }
+    .swiper-slide {
+      text-align: center;
+    }
+    img {
+      max-width: 400px;
+      width: 60%;
+    }
+    @media screen and (max-width: 576px) {
+      img {
+        width: 90%;
+      }
+    }
+    .container {
+      padding: 20px;
+    }
+    /* @media screen and (max-width: 576px) { */
+      .container {
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 100vh;
+      }
+    /* } */
+    .swiper-button-next, .swiper-rtl .swiper-button-prev {
+      right: 0px;
+      left: auto;
+    }
+    .swiper-button-prev, .swiper-rtl .swiper-button-next {
+      left: 0px;
+      right: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+     <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <img src="./img/1.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/2.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/3.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/4.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/5.jpg" alt="">
+        </div>
+        <div class="swiper-slide">
+          <img src="./img/6.jpg" alt="">
+        </div>
+      </div>
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      // Optional parameters
+      loop: false,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      // spaceBetween: 30,
+    });
+  </script>
+</body>
+</html>
